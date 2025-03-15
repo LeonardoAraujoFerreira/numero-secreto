@@ -15,7 +15,7 @@ function exibirTextoNaTela(tag, texto) {
     }
 }
 exibirTextoNaTela('h1', 'Número Secreto')
-exibirTextoNaTela('p', 'Escolha um número entre 1 e 100')
+exibirTextoNaTela('p', 'Escolha um número entre 1 e 50')
 function verificarChute() {
     let chute = document.querySelector('input').value;
     if(chute == numeroSecreto) {
@@ -34,12 +34,12 @@ function verificarChute() {
     }
 }
 function gerarNumeroAleatorio() {
-   let numeroEscolhido = parseInt(Math.random() *100 +1)
+   let numeroEscolhido = parseInt(Math.random() *50 +1)
    let quantidadeNumeroEscolhidos = listaSorteados.length;
-   if (quantidadeNumeroEscolhidos == 100) {
+   if (quantidadeNumeroEscolhidos == 50) {
     listaSorteados = []
     exibirTextoNaTela('h1', 'Parabéns!');
-    exibirTextoNaTela('p', 'Você acertou todos os números de 1 a 100!');
+    exibirTextoNaTela('p', 'Você acertou todos os números de 1 a 50!');
    }
    if (listaSorteados.includes(numeroEscolhido)) {
     return gerarNumeroAleatorio() 
